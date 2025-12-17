@@ -5,7 +5,6 @@
   "main": "./lib/index.cjs.js",
   "module": "./lib/index.es.js",
   "files": [
-    "index.js",
     "lib",
     "README.md",
     "LICENSE.md"
@@ -27,6 +26,7 @@
     "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
+    "rimraf": "^6.1.2",
     "rollup": "^0.60.1",
     "rollup-plugin-babel": "^3.0.4"
   },
@@ -34,6 +34,7 @@
     "react": ">= 16.3.x"
   },
   "scripts": {
-    "prepublish": "rm -rf lib && rollup -c"
+    "clean": "rimraf lib",
+    "prepublish": "yarn run clean && rollup -c"
   }
 }
