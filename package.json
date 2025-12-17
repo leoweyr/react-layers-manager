@@ -29,12 +29,17 @@
     "rimraf": "^6.1.2",
     "rollup": "^0.60.1",
     "rollup-plugin-babel": "^3.0.4"
+    "typescript": "^5.9.3"
   },
   "peerDependencies": {
     "react": ">= 16.3.x"
   },
   "scripts": {
     "clean": "rimraf lib",
-    "prepublish": "yarn run clean && rollup -c"
+    "build": "yarn run clean && rollup -c"
+  },
+  "dependencies": {
+    "react": "^19.2.3",
+    "react-dom": "^19.2.3"
   }
 }
